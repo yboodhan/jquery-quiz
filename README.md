@@ -16,9 +16,10 @@ Before attempting this assignment, students should have some knowledge of:
 * At least 5 questions
 * A result or score is displayed at the end
 * Radio buttons (if used) are reset after submitting an answer
-* Don't let a user continue if they didn't select an answer!
+* Don't let a user continue if they didn't select an answer
+* Present your quiz to the class
 
-Hint: You need to represent your question and answer data as an array of objects. 
+Here's a big hint: You need to represent your question and answer data as an array of objects.
 
 Your array of question objects could potentially look like the code below. It doesn't need to look exactly like this and you are encouraged to deviate as your requirements demand, but it's here to get you started if you need:
 
