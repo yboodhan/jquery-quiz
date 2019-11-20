@@ -34,7 +34,7 @@ let questions = [{
 $('.start').click(function() {
     $('#quesAndAns').css('visibility','visible')
     $('.next').css('visibility', 'hidden')
-    $('.start').css('visibility', 'hidden')
+    $('.start').css('display', 'none')
     $('#message').text('')
     next = 0
     scored = 0
@@ -45,7 +45,7 @@ $('.submit').click(function() {
     //tell user score at the end
     score()
     //on submit, give score, make start button available again
-    $('.start').css('visibility', 'visible').text('Play Again')
+    $('.start').css('display', 'inline-block').text('Play Again')
     $('.submit').css('visibility', 'hidden')
     $('.back').css('visibility', 'hidden')
 })

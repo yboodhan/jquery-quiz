@@ -1,47 +1,72 @@
 html,
 body {
-  min-height: 100vh;
+  min-height: 85vh;
   margin: 0;
   padding: 0;
   display: inline-block;
   text-align: center;
+  background-color: darkgrey;
+  
 }
-
 h1 {
-  color: chartreuse;
+  color: rgba(66, 71, 237, 0.961);
   text-align: center;
+  font-family: 'Alata', sans-serif;
+  /* font-style: uppercase; */
+  padding: 0px 40px;
+  background-color: darkgrey;
+  border: groove 1em grey;
+  border-radius: 2em;
 }
-
+#tracker {
+  color: whitesmoke;
+  font-family: 'Alata', sans-serif;
+  font-size: 15px;
+}
 #quesAndAns {
   width: 550px;
   height: 450px;
   margin: 20px;
   border: 1px solid black;
+  border-radius: 10px 10px 10px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: space-around;
   visibility: hidden;
+  background-color: white
 }
-
 #ques {
-  border: 1px solid red;
+  border-radius: 10px 10px 0 0;
+  font-family: 'Alata', sans-serif;
+  padding: 20px 45px;
+  background-color: rgba(30, 38, 255, 0.961);
+  color:white
 }
-
 #ans {
-  border: 1px solid blue;
+  border-radius: 0px 0px 10px 10px;
   display: flex;
   flex-wrap: wrap;
+  font-family: 'Alata', sans-serif;
+  background-color:black;
+  color: white;
 }
-
+.ansChoice:hover {
+  background: blue;
+}
 .ansChoice {
-  width: 250px;
-  height: 50px;
-  border: 1px solid black;
+  width: 220px;
+  height: 40px;
+  border: 1px solid grey;
   padding: 5px;
   margin: 5px;
+  font-family: 'Alata', sans-serif;
+  /* border-radius: 3px; */
+  border: groove 1em grey;
+  border-radius: 2em;
+  
 }
-
+  
 #buttons {
   display: flex;
   justify-content: space-between;
@@ -49,11 +74,37 @@ h1 {
   visibility: hidden;
 }
 
-.show {
-  visibility: none;
-}
-
 img {
   height: 250px;
   width: 300px;
+}
+
+p {
+  font-family: 'Alata', sans-serif;
+}
+
+.back, .submit, .next {
+  padding: 10px 40px;
+  font-family: 'Alata', sans-serif;
+  border: 3px solid black;
+  border-radius: 10%;
+  background: rgb(204, 203, 203);
+  margin: 50px;
+}
+
+.start {
+  padding: 10px 40px;
+  font-family: 'Alata', sans-serif;
+  border: 3px solid black;
+  border-radius: 10%;
+  background: rgb(204, 203, 203);
+  margin: 20px;
+}
+
+#message {
+  font-family: 'Alata', sans-serif;
+}
+
+button:hover {
+  background: grey;
 }
