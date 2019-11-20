@@ -1,6 +1,5 @@
-var quesNum = 0
 var next = 0
-let userAnswers = []
+var userAnswers = []
 var scored = 0
 
 let questions = [{
@@ -37,7 +36,17 @@ $('.start').click(function() {
     $('.next').css('visibility', 'hidden')
     $('.start').css('visibility', 'hidden')
     next = 0
+    $('#message').text('')
     quiz()
+})
+
+$('.submit').click(function() {
+    //tell user score at the end
+    score()
+    //on submit, give score, make start button available again
+    $('.start').css('visibility', 'visible').text('Play Again')
+    $('.submit').css('visibility', 'hidden')
+    $('.back').css('visibility', 'hidden')
 })
 
 //add event listener to each answer choice
@@ -46,11 +55,12 @@ $('.ansChoice').each(function() {
     $(this).click(function() {
         var index = $('.ansChoice').index($(this))
         userAnswers[next] = index
-        if (userAnswers.length >= (next+1)) {
+        if (userAnswers.length >= (next+1) && (next < 4)) {
             $('.next').css('visibility', 'visible')
+            
+        } else if (userAnswers.length >= (next+1) && (next == 4)){
+            $('.submit').css('visibility', 'visible')
         }
-        console.log(index + " is index")
-        console.log(userAnswers)
     })
 })
 
@@ -68,7 +78,6 @@ const quiz = () => {
         $('.back').css('visibility', 'hidden')
     } else if (next == 4) {
         $('.next').css('visibility', 'hidden')
-        $('.submit').css('visibility', 'visible')
     } else {
         $('.submit').css('visibility', 'hidden')
     }
@@ -79,7 +88,6 @@ const quiz = () => {
 //add event listener to back button that changes next value
 $('.back').click(function() {
     next--
-    console.log(next)
     $('.next').css('visibility', 'visible')
     quiz()
 })
@@ -89,18 +97,18 @@ $('.back').click(function() {
 //dont allow to continue without answer (turn event listener for button off and activate on click)
 $('.next').click(function() {
     next++
-    console.log(next)
     $('.back').css('visibility', 'visible')
     quiz()
 })
 
-$('.submit').click(function() {
-    //tell user score at the end
-    $('#message').text('You scored ' + scored)
-    $('.start').css('visibility', 'visible').text('Play Again')
-    $('.submit').css('visibility', 'hidden')
-    $('.back').css('visibility', 'hidden')
-})
+const score = () => {
+    for (let i = 0; i < userAnswers.length; i++) {
+        console.log(userAnswers[i])
+        console.log(questions[i].correctAnswerIndex)
+        if (userAnswers[i] == questions[i].correctAnswerIndex) {
+            scored++
 
-
-//on submit, give score, make start button available again
+        }
+    }
+    $('#message').text('You scored ' + scored + ' out of 5.')
+}
