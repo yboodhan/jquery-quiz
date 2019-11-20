@@ -36,6 +36,7 @@ $('.start').click(function() {
     $('.next').css('visibility', 'hidden')
     $('.start').css('visibility', 'hidden')
     next = 0
+    scored = 0
     $('#message').text('')
     quiz()
 })
