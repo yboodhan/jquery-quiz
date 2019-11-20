@@ -34,7 +34,7 @@ let questions = [{
     answers: ["The Simpsons", "Rick & Morty", "Bob's Burgers", "Family Guy"],
     correctAnswerIndex: 0
  }, {
-    prompt: "Which this character?",
+    prompt: "This character's name is ?",
     answers: ["Peter griffin", "Bender", "Fry", "Gary"],
     correctAnswerIndex: 2
  }, {
