@@ -35,9 +35,9 @@ $('.start').click(function() {
     $('#quesAndAns').css('visibility','visible')
     $('.next').css('visibility', 'hidden')
     $('.start').css('visibility', 'hidden')
+    $('#message').text('')
     next = 0
     scored = 0
-    $('#message').text('')
     quiz()
 })
 
@@ -111,5 +111,6 @@ const score = () => {
 
         }
     }
+    $('#tracker').text('')
     $('#message').text('You scored ' + scored + ' out of 5.')
 }
