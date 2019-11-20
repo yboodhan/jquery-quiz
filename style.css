@@ -1,10 +1,54 @@
 html,
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+  display: inline-block;
+  text-align: center;
 }
 
 h1 {
   color: chartreuse;
   text-align: center;
+}
+
+#quesAndAns {
+  width: 550px;
+  height: 500px;
+  margin: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-around;
+  visibility: hidden;
+}
+
+#ques {
+  border: 1px solid red;
+}
+
+#ans {
+  border: 1px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ansChoice {
+  width: 250px;
+  height: 50px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  visibility: hidden;
+}
+
+.show {
+  visibility: none;
 }
